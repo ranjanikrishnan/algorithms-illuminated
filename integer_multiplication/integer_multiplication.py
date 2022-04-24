@@ -19,7 +19,7 @@ def get_number_of_digits(num: int) -> int:
     return len(str(num))
 
 
-def split_number_into_two(num: int, num_length) -> Tuple[int, int]:
+def split_number_into_two(num: int, num_length: int) -> Tuple[int, int]:
     i = pow(10, num_length/2)
     first_half = int(num // i)
     second_half = int(num % i)
