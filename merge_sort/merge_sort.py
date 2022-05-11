@@ -5,8 +5,6 @@ def merge_sort(a: List[int]) -> List[int]:
     n = len(a)
     if n == 1:
         return a
-    print(a[:int(n/2)])
-    print(a[int(n/2):])
     c = merge_sort(a[:int(n/2)])
     d = merge_sort(a[int(n/2):])
     return merge(c, d)
