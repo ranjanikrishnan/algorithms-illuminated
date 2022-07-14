@@ -1,6 +1,5 @@
-import math
 from typing import List
-import statistics
+import random
 
 
 def partition(a: List[int], l: int, r: int) -> int:
@@ -17,21 +16,13 @@ def partition(a: List[int], l: int, r: int) -> int:
 def quick_sort(a: List[int], l: int, r: int):
     if l >= r:
         return
-    i = choose_median_pivot(a, l, r)
+    i = random.randint(l, r - 1)
     a[l], a[i] = a[i], a[l]
     j = partition(a, l, r)
     quick_sort(a, l, j)
     quick_sort(a, j+1, r)
 
 
-def choose_median_pivot(a: List[int], l: int, r: int) -> int:
-    mid = (r - l) // 2
-    numbers = [a[l], a[r-1], a[mid]]
-    numbers.sort()
-    median = statistics.median(numbers)
-    median_index = a.index(math.floor(median))
-
-    return median_index
 
 
 

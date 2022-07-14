@@ -18,7 +18,7 @@ def quick_sort(a: List[int], l: int, r: int):
     i = l
     a[l], a[i] = a[i], a[l]
     j = partition(a, l, r)
-    quick_sort(a, l, j-1)
+    quick_sort(a, l, j)
     quick_sort(a, j+1, r)
 
 
