@@ -12,8 +12,12 @@ class TestQuickSortRandomPivot(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_quick_sort(self):
-        a = [3, 8, 2, 5, 1, 4, 7, 6]
-        quick_sort(a, 0, len(a))
-        expected = [1, 2, 3, 4, 5, 6, 7, 8]
-        self.assertEqual(expected, a)
+        # a = [3, 8, 2, 5, 1, 4, 7, 6]
+        # quick_sort(a, 0, len(a))
+        # expected = [1, 2, 3, 4, 5, 6, 7, 8]
+        # self.assertEqual(expected, a)
 
+        a = [6, 8, 9, 2]
+        quick_sort(a, 0, len(a))
+        expected = [2, 6, 8, 9]
+        self.assertEqual(expected, a)

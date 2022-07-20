@@ -21,9 +21,3 @@ def quick_sort(a: List[int], l: int, r: int):
     j = partition(a, l, r)
     quick_sort(a, l, j)
     quick_sort(a, j+1, r)
-
-
-
-
-
-
